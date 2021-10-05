@@ -1,0 +1,12 @@
+Entrée : données X (dimension nxp), étiquettes y (dimension n), nombre de folds k
+
+Couper [0, 1, ..., n-1] en k parties de taille (n/k). (La dernière partie sera un peu plus petite si n n'est pas un multiple de k)
+
+for i=0 to (k-1):
+    Former le jeu de test (X_test, y_test) en restreignant X et y aux indices contenus dans la i-ième partie.
+    Former le jeu d'entraînement (X_train, y_train) en restreignant X et y aux autres indices.
+    Entraîner l'algorithme sur le jeu d'entraînement
+    Utiliser le modèle ainsi obtenu pour prédire sur le jeu de test
+        Calculer l'erreur du modèle en comparant les étiquettes prédites aux vraies étiquettes contenues dans y_test
+
+Sortie : la valeur moyenne des erreurs calculées sur les k folds.
